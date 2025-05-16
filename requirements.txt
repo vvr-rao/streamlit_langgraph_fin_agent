@@ -1,5 +1,6 @@
 streamlit==1.45.0
 yahoo-finance==1.4.0
+yfinance==0.2.61
 langchain-core==0.3.59
 langchain-community==0.3.24
 langgraph==0.4.3
