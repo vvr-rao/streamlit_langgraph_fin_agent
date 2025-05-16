@@ -162,7 +162,7 @@ from langchain_openai import ChatOpenAI
 import os
 
 # Retrieve API key from secrets
-openai_api_key = st.secrets["OEPNAI_API_KEY"]
+openai_api_key = st.secrets["OPENAI_API_KEY"]
 
 os.environ['OPENAI_API_KEY'] = openai_api_key
 
@@ -257,5 +257,5 @@ with st.container():
                 st.session_state.graph_messages = response['messages']
                 out = response['messages'][-1].content
             messages.write(out)
-            
+
         st.session_state.messages.append({"role": "assistant", "content": out})
