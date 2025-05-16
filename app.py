@@ -20,7 +20,12 @@ st.title('Simple Stock Market Research Agent')
 
 ###################
 ###Define Tools###
+from GoogleNews import GoogleNews
+googlenews = GoogleNews(lang='en')
+
 import yfinance as yf
+import requests
+from bs4 import BeautifulSoup
 
 def get_stock_details(ticker: str) -> str:
     """Gets the details of a stock from Yahoo finance including current price, previous close, 52 week range, a summary of the business and things like the address and industry
@@ -78,8 +83,6 @@ def get_stock_news(ticker: str) -> str:
 
     return news_summaries
 
-from GoogleNews import GoogleNews
-googlenews = GoogleNews(lang='en')
 
 def web_search_news(search_term: str) -> str:
     """Does a web search for news on a term and returns a summary of the first 10 items. This can be used for a general web search for news without tying the search to a stock.
@@ -103,8 +106,7 @@ def web_search_news(search_term: str) -> str:
 
     return news_summaries
 
-import requests
-from bs4 import BeautifulSoup
+
 
 def web_search_general(search_term: str) -> str:
     """Does a general web search and provides a abstracts of the top results. Use this to find infomration on a subject.
