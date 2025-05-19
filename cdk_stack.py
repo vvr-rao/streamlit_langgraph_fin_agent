@@ -105,10 +105,22 @@ class CdkStack(Stack):
             f"{prefix}ECSService",
             cluster=cluster,
             task_definition=fargate_task_definition,
+            #desired_count=2, #increase this number to scale up
             service_name=f"{prefix}-stl-front",
             security_groups=[ecs_security_group],
             vpc_subnets=ec2.SubnetSelection(
                 subnet_type=ec2.SubnetType.PRIVATE_WITH_EGRESS),
+        )
+
+        #for illustartive purposes only. set up scaling for the fargate task count
+        scaling = service.auto_scale_task_count(
+            min_capacity=2,
+            max_capacity=4
+        )
+        
+        scaling.scale_on_cpu_utilization(
+            "CpuScaling",
+            target_utilization_percent=50
         )
 
         # Add ALB as CloudFront Origin
