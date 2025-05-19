@@ -10,6 +10,7 @@ from aws_cdk import (
     aws_cloudfront_origins as origins,
     aws_elasticloadbalancingv2 as elbv2,
 )
+from constructs import Construct
 
 prefix="FinAgent"
 
@@ -82,7 +83,7 @@ class CdkStack(Stack):
         openai_secret.grant_read(fargate_task_definition.task_role)
 
         # Build Dockerfile from local folder and push to ECR
-        image = ecs.ContainerImage.from_asset('docker_app')
+        image = ecs.ContainerImage.from_asset('streamlit-docker')
 
         fargate_task_definition.add_container(
             f"{prefix}WebContainer",
