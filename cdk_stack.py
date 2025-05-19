@@ -71,8 +71,9 @@ class CdkStack(Stack):
         fargate_task_definition = ecs.FargateTaskDefinition(
             self,
             f"{prefix}WebappTaskDef",
-            memory_limit_mib=512,
-            cpu=256,
+            memory_limit_mib=2048,
+            cpu=1024,
+            ephemeral_storage_gib=50  # Increase from default 20 GiB to 50 GiB
         )
 
         openai_secret = secretsmanager.Secret.from_secret_name_v2(
