@@ -140,7 +140,6 @@ class CdkStack(Stack):
             f"{prefix}TargetGroup",
             target_group_name=f"{prefix}-tg",
             port=8501,
-            priority=1,
             protocol=elbv2.ApplicationProtocol.HTTP,
             targets=[service],
         )
