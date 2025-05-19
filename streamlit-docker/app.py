@@ -163,10 +163,9 @@ from langgraph.prebuilt import ToolNode
 from langchain_openai import ChatOpenAI
 import os
 
-# Retrieve API key from secrets
-openai_api_key = st.secrets["OPENAI_API_KEY"]
-
-os.environ['OPENAI_API_KEY'] = openai_api_key
+# Retrieve API key from secrets. UNCOMMENT THE BELOW IF YOU ARE DEPLOYING ON STREAMLIT CLOUD
+#openai_api_key = st.secrets["OPENAI_API_KEY"]
+#os.environ['OPENAI_API_KEY'] = openai_api_key
 
 llm = ChatOpenAI(model="gpt-4o")
 
