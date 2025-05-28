@@ -25,15 +25,15 @@ mkdir cdk && cd cdk
 ```bash
 cdk init app --language python
 ```
-#### Step 5 - Create a Virtual Environment and install the dependencies.
+#### Step 5: Create a Virtual Environment and install the dependencies.
 ```bash
 python3 -m venv .env
 source .env/bin/activate 
 pip install --upgrade pip
 pip install -r requirements.txt
 ```
-#### Step 6 - replace the default CDK Stack with the one you created (cdk_stack.py) and set up additional folfer structure
-#### Step 7 - Deploy
+#### Step 6: replace the default CDK Stack with the one you created (cdk_stack.py) and set up additional folfer structure
+#### Step 7: Deploy
 You need to bootstrap the environment if this is the first time running the environment
 ```bash
 cdk bootstrap
@@ -43,7 +43,7 @@ Otherwise, simply run
 cdk deploy
 ```
 You may need to adjust permissions on your user
-#### Step 8 - DESTROY THE DEPLOYMENT AFTER USE!!!
+#### Step 8: DESTROY THE DEPLOYMENT AFTER USE!!!
 ```bash
 cdk destroy
 ```
