@@ -1,6 +1,7 @@
 # A Reusable Recipe for an End-to-End Build and Deploy of a Fully Functioning Agentic App
 
-!/images/aws_architecture.jpg
+![Architecture](./images/aws_architecture.jpg)
+               
 
 Simple Financial Research assistant Agent to be hosted using Streamlit with code to deploy to AWS using CDK.
 
