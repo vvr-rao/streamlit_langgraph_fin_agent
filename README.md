@@ -9,7 +9,7 @@ Here is the architure I am deploying.
 ![Architecture](./images/aws_architecture.jpg)
                
 ## Steps to deploy
-### 1. Create a STreamlit App
+### 1. Create a Streamlit App
 ### 2. Dockerize
 ```bash
 docker build -f Dockerfile -t app:latest .
