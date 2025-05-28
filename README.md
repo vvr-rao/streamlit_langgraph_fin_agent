@@ -1,6 +1,6 @@
 # A Reusable Recipe for an End-to-End Build and Deploy of a Fully Functioning Agentic App
 
-Simple Financial Research assistant Agent to be hosted using Streamlit with code to deploy to AWS using CDK.
+Simple Financial Research assistant Agent to be hosted using Streamlit with code to deploy to AWS using CDK. The Agent has been built using LangGraph and uses AWS Fargate, AWS ALB and CloudFront for security and scalability.
 
 For a detailed explanation: https://medium.com/@venkat.ramrao/a-recipe-for-an-end-to-end-build-and-deploy-of-a-fully-functioning-agentic-app-a0da58154536
 
